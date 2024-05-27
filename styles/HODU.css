@@ -33,7 +33,7 @@ a:visited{
     margin: 0 756px 0 320px;
 }
 
-.click-list, .hodu-page-bottom, .hodu_icons{
+.click-list, footer, .hodu_icons{
     display: flex;
     align-items: center;
 }
