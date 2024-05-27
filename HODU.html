@@ -37,10 +37,10 @@
         <img src="images/img_4.png" alt="침대 위에 누워있는 고양이 사진" class="bed_cat">
         <div>
             <h2 class="bed_cat_title">
-                고양이 자랑을 시작할게요! 고양이가 아주 귀엽죠?
+                고양이가 아주 귀엽죠?
             </h2>
             <p class="bed_cat_text">
-                하지만 저는 고양이를 키우지는 않아요. 그냥 귀여우니까요. 이거 만드는 김에 고양이 구경 많이 하는 거죠. 고양이 사진이 많아서 아주 좋았습니다.
+                하지만 저는 고양이를 키우지는 않아요. 이걸 보시는 분은 고양이를 좋아하시나요? 저는 좋아합니다. 이 페이지에 귀여운 고양이가 여럿 있으니 사진을 보며 스트레스를 푸시길 바랍니다.
             </p>
         </div>
     </section>
@@ -139,7 +139,7 @@
                 throw new Error('네트워크 응답에 문제가 있습니다.');
             }
 
-            // 제이슨 데이터를 자바스크립트 객체로 파싱
+            
             const datas = await response.json();
             console.log(datas);
             makeImageList(datas);
@@ -155,24 +155,20 @@
         });
     }
 
-    const mapContainer = document.getElementById('map'), // 지도를 표시할 div
+    const mapContainer = document.getElementById('map'), 
         mapOption = {
-            center: new kakao.maps.LatLng(33.442337, 126.571487), // 지도의 중심좌표
-            level: 3 // 지도의 확대 레벨
+            center: new kakao.maps.LatLng(33.442337, 126.571487), 
+            level: 3
         };
 
-    // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
     const map = new kakao.maps.Map(mapContainer, mapOption);
 
-    // 마커가 표시될 위치입니다
     const markerPosition  = new kakao.maps.LatLng(33.442337, 126.571487);
 
-    // 마커를 생성합니다
     const marker = new kakao.maps.Marker({
         position: markerPosition
     });
 
-    // 마커가 지도 위에 표시되도록 설정합니다
     marker.setMap(map);
 </script>
 
